@@ -17,6 +17,7 @@ reply_markup=InlineKeyboardMarkup(
                 [InlineKeyboardButton('Report Errors', url='https://t.me/dhashamoolams_bot')],
             ]
 )
+)
 
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
