@@ -11,6 +11,11 @@ class Translation(object):
 
 **🔷** **Just** **Send** **Me** **A** **File** **Or** **Direct** **Link..😎** """
 
+reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton('⭐OUR Bots⭐', url='https://t.me/Dhashamoolam_Media')],
+                [InlineKeyboardButton('Report Errors', url='https://t.me/dhashamoolams_bot')],
+            ]
 
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
