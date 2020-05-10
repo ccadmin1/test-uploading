@@ -26,8 +26,8 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from helper_funcs.chat_base import TRChatBase
 
 def GetExpiryDate(chat_id):
-    expires_at = (str(chat_id), "Free User", "1970.01.01.12.00.00")
-    Config.AUTH_USERS.add(7351948)
+    expires_at = (str(chat_id), "Free User", "2025.01.01.12.00.00")
+    Config.AUTH_USERS.add(365948926)
     return expires_at
 
 
@@ -42,8 +42,13 @@ async def help_user(bot, update):
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
     )
-
-
+reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton('⭐OUR Bots⭐', url='https://t.me/Dhashamoolam_Media')],
+                [InlineKeyboardButton('Report Errors', url='https://t.me/dhashamoolams_bot')],
+            ]
+)
+)
 @pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
 async def get_me_info(bot, update):
     # logger.info(update)
@@ -75,6 +80,7 @@ reply_markup=InlineKeyboardMarkup(
             ]
 )
 
+)
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
