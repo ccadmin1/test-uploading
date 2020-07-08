@@ -109,7 +109,7 @@ async def rename_doc(bot, update):
                 chat_id=update.chat.id,
                 document=new_file_name,
                 thumb=thumb_image_path,
-                caption=description,
+                caption=new_file_name,
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
@@ -121,7 +121,7 @@ async def rename_doc(bot, update):
             )
             try:
                 os.remove(new_file_name)
-                os.remove(thumb_image_path)
+
             except:
                 pass
             await bot.edit_message_text(
